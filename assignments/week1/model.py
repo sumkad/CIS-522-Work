@@ -28,9 +28,7 @@ class LinearRegression:
             X (np.ndarray): The input data.
         """
         biasX = np.concatenate((X, np.ones((X.shape[0], 1))), axis=1)
-        print(biasX)
         biasW = np.linalg.pinv((biasX.T @ biasX)) @ biasX.T @ y
-        print(biasW)
         self.b = biasW[-1]
         self.w = biasW[:-1]
 
