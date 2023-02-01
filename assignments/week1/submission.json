@@ -4,9 +4,13 @@
         {
             "name": "Sumanth Kadiyala",
             "pennkey": "sumanthk"
+        },
+        {
+            "name": "David Zhi LuoZhang",
+            "pennkey": "davidlz"
         }
     ],
     "sources": [
-
+        "https://numpy.org/doc/"
     ]
 }
