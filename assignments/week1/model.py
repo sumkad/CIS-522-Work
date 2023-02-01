@@ -5,12 +5,16 @@ import random
 """
     A linear regression model that uses gradient descent to fit the model.
 """
+
+
 class LinearRegression:
     """
-        A linear regression model that uses gradient descent to fit the model.
+    A linear regression model that uses gradient descent to fit the model.
     """
+
     w: np.ndarray
     b: float
+
     def __init__(self) -> None:
         # raise NotImplementedError()
         self.w = None
@@ -76,4 +80,3 @@ class GradientDescentLinearRegression(LinearRegression):
             np.ndarray: The predicted output.
         """
         return X @ self.w + self.b
- 
