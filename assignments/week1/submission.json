@@ -1,16 +1,3 @@
 {
-    "assignment_name": "Assignment 1",
-    "contributors": [
-        {
-            "name": "Sumanth Kadiyala",
-            "pennkey": "sumanthk"
-        },
-        {
-            "name": "David Zhi LuoZhang",
-            "pennkey": "davidlz"
-        }
-    ],
-    "sources": [
-        "https://numpy.org/doc/"
-    ]
+    
 }
