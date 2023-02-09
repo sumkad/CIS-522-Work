@@ -6,14 +6,15 @@ class MLP(torch.nn.Module):
     """
     Multi Layered Perceptron Model
     """
+
     def __init__(
-            self,
-            input_size: int,
-            hidden_size: int,
-            num_classes: int,
-            hidden_count: int = 1,
-            activation: Callable = torch.nn.ReLU,
-            initializer: Callable = torch.nn.init.ones_,
+        self,
+        input_size: int,
+        hidden_size: int,
+        num_classes: int,
+        hidden_count: int = 1,
+        activation: Callable = torch.nn.ReLU,
+        initializer: Callable = torch.nn.init.ones_,
     ) -> None:
         """
         Initialize the MLP.
@@ -37,9 +38,7 @@ class MLP(torch.nn.Module):
         hidden_layers = []
         for i in range(self.hidden_count):
             if i == 0:
-                hidden_layers.append(
-                    torch.nn.Linear(self.input_size, self.hidden_size)
-                )
+                hidden_layers.append(torch.nn.Linear(self.input_size, self.hidden_size))
             else:
                 hidden_layers.append(
                     torch.nn.Linear(self.hidden_size, self.hidden_size)
@@ -62,4 +61,3 @@ class MLP(torch.nn.Module):
         """
 
         return self.output_layer(self.hidden_layers(x))
-
