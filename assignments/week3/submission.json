@@ -1,14 +1,16 @@
 {
-    "assignment_name": "MLP",
+    "assignment_name": "Assignment 1",
     "contributors": [
         {
-            "name": "Jordan Matelsky",
-            "pennkey": "matelsky"
+            "name": "Sumanth Kadiyala",
+            "pennkey": "sumanthk"
+        },
+        {
+            "name": "David Zhi LuoZhang",
+            "pennkey": "davidlz"
         }
     ],
     "sources": [
-        "https://example.com",
-        "Conversations with TA (include TA's name)",
-        "LLM (include information about the LLM and how it was used)"
+        "https://pytorch.org"
     ]
 }

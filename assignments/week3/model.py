@@ -59,4 +59,4 @@ class MLP:
         Returns:
             int: The output of the network.
         """
-        return self.output_layer(self.hidden_layers(x)) 
+        return self.output_layer(self.hidden_layers(x))
