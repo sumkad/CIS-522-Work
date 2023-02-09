@@ -2,19 +2,18 @@ import torch
 from typing import Callable
 
 
-class MLP:
+class MLP(torch.nn.Module):
     """
-    Implementation for Multi-Layer Perceptron Model
+    Multi Layered Perceptron Model
     """
-
     def __init__(
-        self,
-        input_size: int,
-        hidden_size: int,
-        num_classes: int,
-        hidden_count: int = 1,
-        activation: Callable = torch.nn.ReLU,
-        initializer: Callable = torch.nn.init.ones_,
+            self,
+            input_size: int,
+            hidden_size: int,
+            num_classes: int,
+            hidden_count: int = 1,
+            activation: Callable = torch.nn.ReLU,
+            initializer: Callable = torch.nn.init.ones_,
     ) -> None:
         """
         Initialize the MLP.
@@ -38,7 +37,9 @@ class MLP:
         hidden_layers = []
         for i in range(self.hidden_count):
             if i == 0:
-                hidden_layers.append(torch.nn.Linear(self.input_size, self.hidden_size))
+                hidden_layers.append(
+                    torch.nn.Linear(self.input_size, self.hidden_size)
+                )
             else:
                 hidden_layers.append(
                     torch.nn.Linear(self.hidden_size, self.hidden_size)
@@ -57,6 +58,8 @@ class MLP:
             x: The input data.
 
         Returns:
-            int: The output of the network.
+            The output of the network.
         """
+
         return self.output_layer(self.hidden_layers(x))
+
