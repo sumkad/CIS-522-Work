@@ -126,8 +126,8 @@ def get_latest_submission_path():
 
 def submit_all_open_assignments():
     # Get the list of open assignments
-
-    assignment_names = ["MLP"]
+    assignments = get_open_assignments()
+    assignment_names = [assignment["name"] for assignment in assignments]
 
     # Get all week#/submission.json files
     submission_jsons = glob.glob("assignments/week*/submission.json")
