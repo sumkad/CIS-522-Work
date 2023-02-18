@@ -9,6 +9,8 @@ class CustomLRScheduler(_LRScheduler):
 
     """
 
+    lastStep: int
+
     def __init__(self, optimizer, last_epoch=-1):
         """
         Create a new scheduler.
@@ -19,8 +21,8 @@ class CustomLRScheduler(_LRScheduler):
 
         """
         # ... Your Code Here ...
-        super(CustomLRScheduler, self).__init__(optimizer, last_epoch)
         self.lastStep = 0
+        super(CustomLRScheduler, self).__init__(optimizer, last_epoch)
 
     def get_lr(self) -> List[float]:
         """
@@ -40,5 +42,5 @@ class CustomLRScheduler(_LRScheduler):
         # ... Your Code Here ...
         # Here's our dumb baseline implementation:
         self.lastStep += 1
-        if self.lastStep % 25 == 0:
+        if self.lastStep % 1000 == 0:
             self.base_lrs *= 0.8
