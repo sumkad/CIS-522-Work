@@ -8,6 +8,7 @@ class CustomLRScheduler(_LRScheduler):
     Custom LR optimizer
 
     """
+
     def __init__(self, optimizer, last_epoch=-1):
         """
         Create a new scheduler.
@@ -27,7 +28,7 @@ class CustomLRScheduler(_LRScheduler):
         """
         return [i for i in self.base_lrs]
 
-    def step(self, epoch = None) -> None:
+    def step(self, epoch=None) -> None:
         """
         Exponentially decreases the learning rate over time
 
@@ -41,4 +42,3 @@ class CustomLRScheduler(_LRScheduler):
         self.lastStep += 1
         if self.lastStep % 25 == 0:
             self.base_lrs *= 0.8
-
