@@ -42,6 +42,6 @@ class CustomLRScheduler(_LRScheduler):
         # ... Your Code Here ...
         # Here's our dumb baseline implementation:
         self.lastStep += 1
-        if self.lastStep % 100 == 0:
+        if self.lastStep % 500 == 0:
             for i in range(len(self.base_lrs)):
                 self.base_lrs[i] *= 0.8
